@@ -41,7 +41,7 @@ export default function AnimatedExperienceTimeline() {
   }, []);
 
   return (
-    <section className=" bg-[#fdfaf7] py-16 px-6 relative">
+    <section id="experiences" className=" bg-[#fdfaf7] py-16 px-6 relative">
       <div className="max-w-4xl mx-auto relative">
         <h2 className="text-4xl font-bold text-[#5b3e31] mb-4 text-center">
           My <span className="text-[#8b5e3c]">Experience</span>
