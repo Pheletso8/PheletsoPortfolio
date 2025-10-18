@@ -9,10 +9,10 @@ export default function Hero() {
         <NavBar />
         <div className="flex flex-1 items-center justify-center">
             <div className='flex flex-col items-center md:flex-row md:items-center md:justify-center'>
-                <img src={idPhoto} alt="ID like photo of me here" className='rounded-2xl object-contain mt-6 w-70 border-4 border-[#5b3e31]'/>
+                <img src={idPhoto} alt="ID like photo of me here" className='rounded-2xl object-contain mt-6 w-70 border-4 border-[#5b3e31] shadow-lg shadow-blue-600'/>
                 <div className='flex flex-col items-center md:ml-8'>
                 <h3 className='text-lg text-[#5b3e31] font-semibold my-4 '>Hello, I'm</h3>
-                <h1 className='text-4xl font-bold animate-pulse mb-4'>Pheletso Marumoloe</h1>
+                <h1 className='text-4xl font-bold text-[#5b3e31] mb-4'>Pheletso Marumoloe</h1>
                 <h2 className='text-blue-600 text-lg font-medium mb-8 mx-4'>
                     Data Scientist and Software Developer
                 </h2>
