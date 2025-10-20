@@ -1,15 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 
 const experiences = [
-  {
-    role: "Software Development Intern",
-    company: "Tshimologong Digital Innovation Precinct",
-    duration: " July 2025 - Present",
-    description:
-      "Participated in an intensive software development programme covering modern technologies and practices including Java, JavaScript, React, TypeScript, Spring Boot, RESTful APIs, MySQL, and Cloud Computing fundamentals. Gained hands-on experience with GitHub, Agile methodologies, and collaborative software development workflows, enhancing both technical and professional skills.",
-    technologies: ["Javascript", "MongoDB", "React", "express", "Nodejs", "Retful APIs", "Git", "Typescript", "&more"],
-  },
-  {
+   {
     role: "Co-founder & ML Engineer",
     company: "Omentics Technologies",
     duration: "July 2024 - feb 2025",
