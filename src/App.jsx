@@ -1,11 +1,14 @@
 import Homepage from "./Pages/Homepage"
+import Layout from './MainLayout/Layout'
 
 
 function App() {
 
   return (
     <>
-    <Homepage />
+      <Layout>
+        <Homepage />
+      </Layout>
     </>
   )
 }

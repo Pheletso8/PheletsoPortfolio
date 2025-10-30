@@ -2,7 +2,7 @@ import { FcInfo } from "react-icons/fc";
 
 export default function ProjectCard({ img, heading, githubLink, liveDemo, description, techStack }) {
   return (
-    <div className="flex flex-col w-80 border border-black rounded-3xl p-4 items-center justify-center shadow-md shadow-[#5b3e31] hover:scale-102 ease-in-out transition-all duration-700">
+    <div className="flex flex-col w-80 border-3 border-black rounded-3xl p-4 items-center justify-center shadow-md shadow-[#5b3e31] hover:scale-102 ease-in-out transition-all duration-700">
       <img 
         src={img} 
         alt={heading} 

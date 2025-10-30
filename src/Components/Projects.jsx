@@ -6,7 +6,7 @@ import recipe from '../assets/download.jfif'
 
 export default function Projects() {
   return (
-    <div id="projects" className="pb-10">
+    <div id="projects" className="pb-10 mt-18">
         <h1 className="text-center mb-2">Browse my recent</h1>
         <h1 className="text-5xl font-semibold text-center mb-8">Projects</h1>
         <div className="flex items-center justify-center">

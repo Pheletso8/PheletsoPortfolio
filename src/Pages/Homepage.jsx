@@ -1,6 +1,5 @@
 import Hero from "../Components/Hero"
 import Projects from "../Components/Projects";
-import Footer from "../Components/Footer";
 import Experience from "../Components/Experience";
 
 
@@ -10,7 +9,6 @@ export default function Homepage() {
         <Hero />
         <Projects />
         <Experience />
-        <Footer />
     </div>
   )
 }
