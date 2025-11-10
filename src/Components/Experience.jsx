@@ -35,10 +35,10 @@ export default function AnimatedExperienceTimeline() {
   return (
     <section id="experiences" className=" bg-[#fdfaf7] py-16 px-6 relative">
       <div className="max-w-4xl mx-auto relative">
-        <h2 className="text-4xl font-bold text-[#5b3e31] mb-4 text-center">
+        <h2 className="text-4xl font-bold text-[#5b3e31] mb-4 text-center text:2xl md:text-4xl lg:text-5xl">
           My <span className="text-[#8b5e3c]">Experience</span>
         </h2>
-        <p className="text-center text-[#5b3e31] mb-12">
+        <p className="text-center text-[#8b5e3c] mb-8 font-semibold text-lg md:text-xl lg:text-2xl underline decoration-clone">
           Journey through Data Science and Software Development intern roles
         </p>
 
@@ -58,20 +58,20 @@ export default function AnimatedExperienceTimeline() {
               style={{ animationDelay: `${index * 0.2}s`, animationFillMode: "forwards" }}
             >
               {/* Timeline Dot */}
-              <div className="absolute left-0 top-2 w-5 h-5 rounded-full bg-[#5b3e31] shadow-md transition-all group-hover:scale-125" />
+              <div className="absolute left-0 top-2 w-5 h-5 rounded-full bg-[#8b5e3c] shadow-md transition-all group-hover:scale-125" />
 
               {/* Card */}
-              <div className="ml-8 border border-[#5b3e31] rounded-3xl p-6 bg-[#fffaf6] shadow-md hover:shadow-blue-600 transition-all duration-300 hover:scale-101 ease-in-out">
-                <h3 className="text-xl font-bold text-blue-500 mb-1">{exp.role}</h3>
-                <p className="text-black font-medium">{exp.company}</p>
+              <div className="ml-8 border-2 border-[#d88964] hover:border-blue-400 rounded-lg p-6 bg-[#fffaf6] shadow-lg hover:bg-blue-100 hover:shadow-blue-300 transition-all duration-300 ease-in-out">
+                <h3 className="text-xl font-bold text-blue-500 mb-1 md:text-3xl">{exp.role}</h3>
+                <p className="text-[#725548] font-medium">{exp.company}</p>
                 <p className="text-sm text-black mt-1">{exp.duration}</p>
-                <p className="mt-3 text-[#5b3e31]/80 leading-relaxed">{exp.description}</p>
+                <p className="mt-3 text-[#9b705c] font-medium leading-relaxed">{exp.description}</p>
 
                 <div className="flex flex-wrap gap-2 mt-4">
                   {exp.technologies.map((tech, i) => (
                     <span
                       key={i}
-                      className="px-3 py-1 rounded-full text-white text-sm bg-[#5b3e31] shadow hover:bg-[#8b5e3c] transition-colors duration-300"
+                      className="px-3 py-1 rounded-full text-[#6d3418] font-semibold text-sm bg-[#D2B48C]"
                     >
                       {tech}
                     </span>

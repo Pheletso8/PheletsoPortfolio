@@ -1,16 +1,18 @@
-import { FcInfo } from "react-icons/fc";
+import { IoInformationCircle } from "react-icons/io5";
+import { CiLink } from "react-icons/ci";
+import { FaGithubAlt } from "react-icons/fa";
 
 export default function ProjectCard({ img, heading, githubLink, liveDemo, description, techStack }) {
   return (
-    <div className="flex flex-col w-80 border-3 border-black rounded-3xl p-4 items-center justify-center shadow-md shadow-[#5b3e31] hover:scale-102 ease-in-out transition-all duration-700">
+    <div className="group relative overflow-hidden transform flex flex-col w-80 border-2 border-[#df8c66] shadow-md hover:shadow-blue-400 hover:border-blue-400 transition-all duration-300 ease-in rounded-lg p-4 items-center justify-center">
       <img 
         src={img} 
         alt={heading} 
-        className="w-60 h-48 object-cover rounded-4xl"
+        className="w-60 h-48 object-cover rounded-4xl border-2 border-[#df8c66] group-hover:scale-103 transition-transform duration-300 ease-in"
       />
       
       <div className="p-4 flex flex-col items-center">
-        <h3 className="text-xl font-semibold text-gray-800 mb-3">
+        <h3 className="text-xl font-semibold text-gray-800 mb-3 group-hover:text-blue-400">
           {heading}
         </h3>
         
@@ -19,38 +21,38 @@ export default function ProjectCard({ img, heading, githubLink, liveDemo, descri
             href={githubLink} 
             target="_blank" 
             rel="noopener noreferrer"
-            className="rounded-full border p-2 hover:bg-[#5b3e31] delay-150 hover:text-white"
+            className="p-2 rounded-lg bg-[#685b22ab] text-white hover:bg-[#5b3e31] transition-all duration-300 ease-in font-semibold flex items-center gap-2"
           >
-            Github repo
+            Repo <FaGithubAlt size={20} />
           </a>
           
           <a 
             href={liveDemo} 
             target="_blank" 
             rel="noopener noreferrer"
-            className="rounded-full border p-2 hover:bg-[#5b3e31] delay-150 hover:text-white"
+            className="p-2 rounded-lg bg-[#685b22ab] text-white hover:bg-[#5b3e31] transition-all duration-300 ease-in font-semibold flex items-center gap-2"
           >
-            Live Demo
+            Demo <CiLink size={26}/>
           </a>
         </div>
         <button 
-          className="m-2 border w-[8rem] flex justify-center items-center gap-2 bg-[#5b3e31] text-white px-4 py-2 rounded-full transition duration-700 ease-in-out transform hover:-translate-y-1 hover:scale-110 hover:bg-white hover:text-[#5b3e31]" 
+          className="p-2 rounded-lg bg-blue-400 text-white hover:bg-blue-300 transition-all duration-300 ease-in font-semibold flex items-center gap-2 cursor-pointer" 
           onClick={() => document.getElementById(`modal_${heading}`).showModal()}
         >
-          More info <FcInfo />
+          More info <IoInformationCircle />
         </button>
         <dialog id={`modal_${heading}`} className="modal">
           <div className="modal-box">
             <form method="dialog">
               <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
             </form>
-            <h3 className="font-bold text-lg mb-2 border-b-2 border-blue-600">{heading}</h3>
-            <p className="py-2 font-semibold">{description}</p>
+            <h3 className="font-bold text-lg mb-2 border-b-2 border-blue-600 text-blue-400">{heading}</h3>
+            <p className="py-2 font-semibold text-[#685b22ab]">{description}</p>
             <div className="mt-4 flex flex-wrap gap-2">
               {techStack && techStack.map((tech, index) => (
                 <span 
                   key={index} 
-                  className="px-3 py-1 border rounded-full text-sm shadow animate-pulse text-white bg-[#5b3e31] border-[#5b3e31]"
+                  className="px-3 py-1 rounded-lg text-sm animate-pulse text-white bg-blue-500"
                 >
                   {tech}
                 </span>
