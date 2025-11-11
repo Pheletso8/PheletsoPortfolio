@@ -1,5 +1,6 @@
 import Logo from '../assets/PH-logo.png';
 import { GiHamburgerMenu } from "react-icons/gi";
+import { motion } from 'framer-motion'
 
 export default function NavBar() {
   return (
@@ -7,7 +8,7 @@ export default function NavBar() {
       {/* Mobile Nav Bar */}
       <div className="flex sticky top-0 z-50 items-center justify-between px-12 py-2 md:hidden bg-[#5b3e31] dark:bg-brown-900">
         <a href="/">
-          <img src={Logo} alt="Logo" className="w-12 h-12 rounded-full" />
+          <motion.img src={Logo} alt="Logo" className="w-12 h-12 rounded-full" initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ duration: 0.5, ease: 'easeOut' }} whileHover={{ scale: 1.05 }} />
         </a>
         <details className="dropdown">
           <summary className="btn m-1 ml-10">
@@ -37,27 +38,33 @@ export default function NavBar() {
       {/* Desktop Nav Bar */}
       <div className="sticky top-0 z-50 hidden md:flex items-center justify-between px-32 lg:px-80 py-6 backdrop-blur-sm bg-gradient-to-r from-[#D2B48C] to-[#E5D3B3]">
         <a href="/" className="flex gap-3 items-center">
-          <img src={Logo} alt="Logo" className="w-16 h-16 rounded-full" />
+          <motion.img src={Logo} alt="Logo" className="w-16 h-16 rounded-full" initial={{ scale: 0.92, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ duration: 0.5 }} whileHover={{ scale: 1.03, rotate: 2 }} />
         </a>
         <div className="flex gap-4 text-xl font-semibold">
-          <a
+          <motion.a
             href="#home"
             className="text-[#5b3e31] p-2 hover:text-white hover:bg-blue-400 hover:rounded-full transition-all duration-300 ease-in"
+            whileHover={{ scale: 1.05 }}
+            transition={{ type: 'spring', stiffness: 300 }}
           >
             Home
-          </a>
-          <a
+          </motion.a>
+          <motion.a
             href="#projects"
             className="text-[#5b3e31] p-2 hover:text-white hover:bg-blue-400 hover:rounded-full transition-all duration-300 ease-in"
+            whileHover={{ scale: 1.05 }}
+            transition={{ type: 'spring', stiffness: 300 }}
           >
             Projects
-          </a>
-          <a
+          </motion.a>
+          <motion.a
             href="#experiences"
             className="text-[#5b3e31] p-2 hover:text-white hover:bg-blue-400 hover:rounded-full transition-all duration-300 ease-in"
+            whileHover={{ scale: 1.05 }}
+            transition={{ type: 'spring', stiffness: 300 }}
           >
             Experience
-          </a>
+          </motion.a>
         </div>
       </div>
     </>
