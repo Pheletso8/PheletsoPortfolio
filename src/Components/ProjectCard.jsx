@@ -1,16 +1,14 @@
 import { IoInformationCircle } from "react-icons/io5";
 import { CiLink } from "react-icons/ci";
 import { FaGithubAlt } from "react-icons/fa";
-import { motion } from 'framer-motion'
 
 export default function ProjectCard({ img, heading, githubLink, liveDemo, description, techStack }) {
   return (
-    <motion.div whileHover={{ scale: 1.02 }} initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.45 }} className="group relative overflow-hidden transform flex flex-col w-80 border-2 border-[#df8c66] shadow-md hover:shadow-blue-400 hover:border-blue-400 transition-all duration-300 ease-in rounded-lg p-4 items-center justify-center">
-      <motion.img 
+    <div className="group relative overflow-hidden transform flex flex-col w-80 border-2 border-[#df8c66] shadow-md hover:shadow-blue-400 hover:border-blue-400 transition-all duration-300 ease-in rounded-lg p-4 items-center justify-center">
+      <img 
         src={img} 
         alt={heading} 
         className="w-60 h-48 object-cover rounded-4xl border-2 border-[#df8c66] group-hover:scale-103 transition-transform duration-300 ease-in"
-        whileHover={{ scale: 1.03 }}
       />
       
       <div className="p-4 flex flex-col items-center">
@@ -63,7 +61,7 @@ export default function ProjectCard({ img, heading, githubLink, liveDemo, descri
           </div>
         </dialog>
       </div>
-    </motion.div>
+    </div>
   )
 }
 
