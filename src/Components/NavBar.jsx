@@ -41,7 +41,7 @@ export default function NavBar() {
         </a>
         <div className="flex gap-4 text-xl font-semibold">
           <a
-            href="/"
+            href="#home"
             className="text-[#5b3e31] p-2 hover:text-white hover:bg-blue-400 hover:rounded-full transition-all duration-300 ease-in"
           >
             Home

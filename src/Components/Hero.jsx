@@ -5,7 +5,7 @@ import { Github } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <div className="min-h-screen bg-gradient-to-r from-[#f9f9f9] to-[#ffffff] p-4 flex flex-col">
+    <div id='home' className="min-h-screen bg-gradient-to-r from-[#f9f9f9] to-[#ffffff] p-4 flex flex-col">
         <div className="flex flex-1 items-center justify-center">
             <div className='flex flex-col md:gap-8 lg:gap-20 items-center md:flex-row md:items-center md:justify-center'>
                 <img src={idPhoto} alt="ID like photo of me here" className='rounded-2xl object-contain mt-6 w-70 border-4 border-[#bc9b5e] shadow-xl shadow-blue-300'/>
