@@ -6,7 +6,7 @@ import NavBar from './NavBar';
 export default function Hero() {
 
   return (
-    <div className="h-screen flex flex-col">
+    <div className="min-h-screen bg-gradient-to-r from-[#f9f9f9] to-[#ffffff] p-4 flex flex-col">
         <div className="flex flex-1 items-center justify-center">
             <div className='flex flex-col items-center md:flex-row md:items-center md:justify-center'>
                 <img src={idPhoto} alt="ID like photo of me here" className='rounded-2xl object-contain mt-6 w-70 border-4 border-[#5b3e31] shadow-lg shadow-blue-600'/>
