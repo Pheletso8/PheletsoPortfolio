@@ -3,6 +3,7 @@ import crud from "../assets/crud.jfif";
 import stream from "../assets/stream.jfif";
 import recipe from '../assets/download.jfif';
 import spani from '../assets/spani.jfif';
+import via from '../assets/_MG_2716.jpg'
 
 export default function Projects() {
   const personalProjects = [
@@ -72,6 +73,20 @@ export default function Projects() {
         "useContext"
       ]
     },
+    {
+      img: via,
+      heading: "Food Place Web Design",
+      githubLink: "https://github.com/Pheletso8/VIAsamaria-web",
+      liveDemo: "https://vi-asamaria-web.vercel.app/",
+      description: `A client-side website design for a popular food place in South Africa, Braamfontein, Called via Samaria. 
+      This was an initiative taken by my mate who asked me for help to create a 
+      different design so that the food and backery place can choose from an asortment of different designs and opt for what they prferred and liked.`,
+      techStack: [
+        "React",
+        "TailwindCSS",
+        "React Router",,
+      ]
+    },
   ];
 
   const collaborationProjects = [
@@ -104,7 +119,7 @@ export default function Projects() {
         Projects
       </h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-6 mb-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-6 mb-12 ">
         {personalProjects.map((project, idx) => (
           <ProjectCard key={idx} {...project} />
         ))}
