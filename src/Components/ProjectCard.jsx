@@ -4,11 +4,11 @@ import { FaGithubAlt } from "react-icons/fa";
 
 export default function ProjectCard({ img, heading, githubLink, liveDemo, description, techStack }) {
   return (
-    <div className="group relative overflow-hidden transform border-t-2 border-[#df8c66] flex flex-col w-80 shadow-[#df8c66] shadow-md hover:shadow-blue-400 hover:border-blue-400 transition-all duration-300 ease-in rounded-lg p-4 items-center justify-center">
+    <div className="group relative overflow-hidden transform border-t-2 border-[#df8c66] flex flex-col w-80 shadow-[#df8c66] shadow-md hover:shadow-blue-400 hover:border-blue-400 transition-all duration-300 rounded-lg p-4 items-center justify-center">
       <img 
         src={img} 
         alt={heading} 
-        className="w-60 h-48 object-cover rounded-4xl border-2 border-[#df8c66] group-hover:scale-103 transition-transform duration-300 ease-in"
+        className="w-60 h-48 object-cover rounded-4xl border-2 border-[#df8c66] group-hover:scale-105 transition-transform duration-300"
       />
       
       <div className="p-4 flex flex-col items-center">
