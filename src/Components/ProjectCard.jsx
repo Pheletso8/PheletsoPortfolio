@@ -1,67 +1,58 @@
-import { IoInformationCircle } from "react-icons/io5";
-import { CiLink } from "react-icons/ci";
-import { FaGithubAlt } from "react-icons/fa";
 
-export default function ProjectCard({ img, heading, githubLink, liveDemo, description, techStack }) {
+import { MoveUpRight } from 'lucide-react';
+
+export default function ProjectCard({ img, heading, liveDemo, techStack, projNum }) {
   return (
-    <div className="group relative overflow-hidden transform border-t-2 border-[#df8c66] flex flex-col w-80 shadow-[#df8c66] shadow-md hover:shadow-blue-400 hover:border-blue-400 transition-all duration-300 rounded-lg p-4 items-center justify-center">
-      <img 
-        src={img} 
-        alt={heading} 
-        className="w-60 h-48 object-cover rounded-4xl border-2 border-[#df8c66] group-hover:scale-105 transition-transform duration-300"
-      />
+    <div className="group shadow-lg cursor-pointer hover:shadow-2xl hover:shadow-primary1/10 relative w-full h-[450px] overflow-hidden rounded-2xl border border-white/10 transition-all duration-700 ease-out">
       
-      <div className="p-4 flex flex-col items-center">
-        <h3 className="text-xl font-semibold text-gray-800 mb-3 group-hover:text-blue-400">
-          {heading}
-        </h3>
+      {/* 1. Background Image */}
+      <div className="absolute inset-0 z-0">
+        <img 
+          src={img} 
+          alt={heading} 
+          className="w-full h-full object-cover transition-transform duration-1000 ease-in-out group-hover:scale-110" 
+        />
+        {/* Fixed dark overlay: Removed the opacity change on hover to prevent flickering */}
+        <div className="absolute inset-0 bg-gradient-to-t from-background1 via-background1/90 to-transparent opacity-90" />
+      </div>
+
+      {/* 2. Content Container */}
+      <div className="relative z-10 h-full p-8 flex flex-col justify-between">
         
-        <div className="flex space-x-4 mb-2">
-          <a 
-            href={githubLink} 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="p-2 rounded-lg bg-[#685b22ab] text-white hover:bg-[#5b3e31] transition-all duration-300 ease-in font-semibold flex items-center gap-2"
-          >
-            Repo <FaGithubAlt size={20} />
-          </a>
-          
+        <div className="flex justify-between items-start">
+          <div className="text-5xl font-serif text-accent1/30 group-hover:text-accent1 transition-colors duration-700 italic">
+            {projNum} 
+          </div>
+
           <a 
             href={liveDemo} 
             target="_blank" 
-            rel="noopener noreferrer"
-            className="p-2 rounded-lg bg-[#685b22ab] text-white hover:bg-[#5b3e31] transition-all duration-300 ease-in font-semibold flex items-center gap-2"
+            rel="noopener noreferrer" 
+            className="p-3 border rounded-full bg-background1/20 backdrop-blur-md border-accent1/30 text-accent1 opacity-0 -translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-out hover:bg-accent1 hover:text-background1"
           >
-            Demo <CiLink size={26}/>
+            <MoveUpRight size={20} />
           </a>
         </div>
-        <button 
-          className="p-2 rounded-lg bg-blue-400 text-white hover:bg-blue-300 transition-all duration-300 ease-in font-semibold flex items-center gap-2 cursor-pointer" 
-          onClick={() => document.getElementById(`modal_${heading}`).showModal()}
-        >
-          More info <IoInformationCircle />
-        </button>
-        <dialog id={`modal_${heading}`} className="modal">
-          <div className="modal-box">
-            <form method="dialog">
-              <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
-            </form>
-            <h3 className="font-bold text-lg mb-2 border-b-2 border-blue-600 text-blue-400">{heading}</h3>
-            <p className="py-2 font-semibold text-[#685b22ab]">{description}</p>
-            <div className="mt-4 flex flex-wrap gap-2">
-              {techStack && techStack.map((tech, index) => (
-                <span 
-                  key={index} 
-                  className="px-3 py-1 rounded-lg text-sm animate-pulse text-white bg-blue-500"
-                >
-                  {tech}
-                </span>
-              ))}
-            </div>
+
+        <div className="space-y-4">
+          <h3 className="text-3xl font-medium text-primary1 tracking-tight transform transition-transform duration-500 group-hover:-translate-y-2">
+            {heading}
+          </h3>
+          
+          <div className="flex flex-wrap gap-2 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-700 delay-100">
+            {techStack && techStack.map((tech) => (
+              <span 
+                key={tech} 
+                /* Removed backdrop-blur-xl here to prevent the 'opaque' flicker */
+                /* Added a solid but semi-transparent background */
+                className="bg-secondary1/20 text-text-main1 text-[10px] uppercase tracking-widest border border-secondary1/30 px-3 py-1 rounded-full"
+              >
+                {tech}
+              </span>
+            ))}
           </div>
-        </dialog>
+        </div>
       </div>
     </div>
-  )
+  );
 }
-

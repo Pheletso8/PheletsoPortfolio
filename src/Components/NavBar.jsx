@@ -1,32 +1,42 @@
-import Logo from '../assets/PH-logo.png'
-import { GiHamburgerMenu } from "react-icons/gi";
+import { useState, useEffect } from 'react';
 
 export default function NavBar() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Set to true if scrolled more than 10px
+      setIsScrolled(window.scrollY > 10);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <>
-
-        {/* Mobile Nav Bar */}
-        <div className='flex sticky top-0 z-50 items-center justify-between px-[3rem] pt-[1rem] md:hidden bg-[#5b3e31] p-2'>
-            <img src={Logo} alt="Logo" className='w-[3rem] h-[3rem] rounded-full'/>
-            <details className="dropdown">
-                <summary className="btn m-1 ml-[40px]"><GiHamburgerMenu size={30}/></summary>
-                <ul className="menu dropdown-content bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
-                    <li><a className='hover:bg-[#5b3e31] hover:text-white font-semibold text-blue-600 hover:text-lg delay-150 ease-in-out transition-all duration-300' href='#projects'>PROJECTS</a></li>
-                    <li><a className='hover:bg-[#5b3e31] hover:text-white font-semibold text-blue-600 hover:text-lg delay-150 ease-in-out transition-all duration-300' href='#experiences'>EXPERIENCES</a></li>
-                </ul>
-            </details>
+    <nav 
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ease-in-out px-6 md:px-12 lg:px-24 py-[1.3rem] flex items-center justify-between
+        ${isScrolled 
+          ? 'bg-background1/70 backdrop-blur-md py-[0.8rem] shadow-sm' 
+          : 'bg-transparent'
+        }`}
+    >
+      <a href="#home" className='group flex items-center gap-3'>
+        <div className='w-12 h-12 rounded-full bg-primary1/10 border border-primary1/30 flex items-center justify-center group-hover:bg-primary1/20 transition-all duration-300'>
+          <span className="font-serif text-xl text-primary1">PM</span>
         </div>
+        <span className="text-xl hidden md:flex text-text-main1 hover:text-primary1 transition-colors duration-300">
+          Pheletso Marumoloe
+        </span>
+      </a>
 
-        {/* Desktop Nav Bar */}
-        <div className='md:flex sticky top-0 z-50 items-center md:px-[10rem] lg:px-[20rem] justify-between px-[3rem] py-[1.3rem] hidden bg-linear-to-r from-[#D2B48C] to-[#E5D3B3]'>
-            <a href=""><img src={Logo} alt="Logo" className='w-[4rem] h-[4rem] rounded-full'/></a>
-            <div className='flex gap-4 text-xl font-semibold'>
-                <a href="#home" className='text-[#5b3e31] p-2 hover:bg-blue-400 rounded-full hover:text-white/80 transition-colors duration-300'>Home</a>
-                <a href="#projects" className='text-[#5b3e31] p-2 hover:bg-blue-400 rounded-full hover:text-white/80 transition-colors duration-300'>Projects</a>
-                <a href="#experiences" className='text-[#5b3e31] p-2 hover:bg-blue-400 rounded-full hover:text-white/80 transition-colors duration-300'>Experience</a>
-            </div>
-        </div>
-    </>
+      <div className='flex gap-4 text-sm text-text-main1 font-medium'>
+        <a href="#projects" className='p-2 text-primary1 hover:text-text-main1/80 transition-colors duration-300'>My Work</a>
+        <a href="#contact" className='p-2 px-4 text-primary1 hover:border-primary1/80 hover:text-text-main1 border-primary1/40 border rounded-full hover:bg-primary1/80 bg-primary1/20 transition-colors duration-300'>
+          Let's Talk
+        </a>
+      </div>
+    </nav>
   );
 }
 
