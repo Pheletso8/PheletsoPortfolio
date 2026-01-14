@@ -8,3 +8,10 @@
   --color-background1: #040b07; /* Background color */
   --color-text-main1: #ecf8f2;
 }
+
+.container-x {
+  @apply px-6 md:px-12 lg:px-24;
+}
+html {
+  scroll-behavior: smooth;
+}
