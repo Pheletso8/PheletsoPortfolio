@@ -1,12 +1,12 @@
 import { useParams } from "react-router-dom";
 import { projects } from "../data/projects";
 
-import BackLink from "../components/BackLink";
-import ProjectHero from "../components/ProjectHero";
-import ProjectMetaCard from "../components/ProjectMetaCard";
-import ProjectSection from "../components/ProjectSection";
-import InsightCard from "../components/InsightCard";
-import InfoPill from "../components/InfoPill";
+import BackLink from "../Components/BackLink";
+import ProjectHero from "../Components/ProjectHero";
+import ProjectMetaCard from "../Components/ProjectMetaCard";
+import ProjectSection from "../Components/ProjectSection";
+import InsightCard from "../Components/InsightCard";
+import InfoPill from "../Components/InfoPill";
 
 export default function ProjectBlog() {
   const { slug } = useParams();
