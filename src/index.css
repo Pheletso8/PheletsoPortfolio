@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@plugin "daisyui";
 
 @theme {
   --color-primary1: #3ec170;   /* Main brand color */
@@ -10,7 +9,7 @@
 }
 
 .container-x {
-  @apply px-6 md:px-12 lg:px-24;
+  @apply px-6 md:px-12 lg:px-24 xl:px-42 2xl:px-64;
 }
 html {
   scroll-behavior: smooth;

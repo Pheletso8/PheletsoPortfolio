@@ -1,55 +1,57 @@
-import crud from "../assets/crud.jfif";
-import stream from "../assets/stream.jfif";
-import recipe from "../assets/recipe.jfif";
-import via from "../assets/via.jfif";
+import mern from "../assets/mern.avif";
+import stream from "../assets/stream.avif";
+import recipe from "../assets/recipe.jpg";
+import via from "../assets/via.jpg";
 
 export const projects = [
   {
     slug: "task-manager",
     id: "01",
     title: "Task Manager",
-    subtitle: "Real-time data visualization platform",
-    image: crud,
-    projectType: "Technology Exploration",
-    role: "Lead Frontend Developer",
+    subtitle: "A platform to manage and visualize tasks efficiently",
+    image: mern,
+    projectType: "MERN Fullstack exploration to learn backend Fundamentals",
+    role: "Individual Project",
     liveDemo: "https://mern-crud-app-jis3.vercel.app/",
-    source: "",
+    source: "https://github.com/Pheletso8/MERN-CRUD-app",
     techStack: [
       "React",
       "TypeScript",
-      "D3.js",
+      "Mongoose",
       "TailwindCSS",
-      "Python",
-      "FastAPI",
-      "PostgreSQL",
+      "Node.js",
+      "express",
+      "Zustand",
+      "REST API"
     ],
     about: `
-      A comprehensive analytics dashboard that transforms complex datasets into
-      actionable insights through intuitive visualizations. Built with a strong
-      focus on performance and user experience.
+      This Task Management System is a full-stack MERN application designed to streamline productivity through a robust, type-safe architecture.
+      Built using TypeScript across both the backend (Node/Express) and frontend (React), the project features a secure authentication system managed by Zustand for seamless state transitions.
+      I implemented a comprehensive RESTful API integrated with MongoDB to handle full CRUD operations, allowing users to plan, commit to, and execute tasks with precision. 
+      The application emphasizes secure data handling, responsive UI design, and efficient state management to provide a reliable tool for professional task organization.
     `,
     challenges: [
       {
-        title: "Real-time Data Streaming",
+        title: "Global error handling and validation",
         description:
-          "Implementing efficient WebSocket connections to handle high-frequency updates without compromising UI performance.",
+          "Implementing centralized error handling and validation logic to ensure consistent error reporting and user feedback.",
       },
       {
-        title: "Complex Visualization Rendering",
+        title: "Understanding the connection of routes, controllers, services and models",
         description:
-          "Optimizing D3.js charts for thousands of data points while maintaining smooth 60fps interactions.",
+          "Dissecting and implementing the layered architecture of the backend to ensure clear separation of concerns and maintainability.",
       },
     ],
     lessons: [
       {
         title: "Performance-first Architecture",
         description:
-          "Designing with memoization, virtualization, and data batching from day one drastically reduced rework.",
+          "Designing with TypeScript, Zustand and global error handling from the ground up enhanced both performance and developer experience.",
       },
       {
-        title: "Data-driven UI Decisions",
+        title: "Seaparation of Concerns",
         description:
-          "Visual clarity improves dramatically when interaction patterns are guided by real user behavior.",
+          "The layered architecture facilitated easier maintenance and scalability, ensuring future enhancements would be straightforward.",
       },
     ],
   },
@@ -57,12 +59,12 @@ export const projects = [
     slug: "mock-movie-app",
     id: "02",
     title: "Mock Movie App",
-    subtitle: "A responsive movie discovery and streaming preview platform",
+    subtitle: "A responsive movie discovery and streaming mock-up platform",
     image: stream,
-    projectType: "Frontend Application",
-    role: "Frontend Developer",
+    projectType: "Frontend Application that consumes an external movie API",
+    role: "Individual Project",
     liveDemo: "https://streamingweb-react.vercel.app/",
-    source: "",
+    source: "https://github.com/Pheletso8/streamingwebReact",
     techStack: [
       "React (Functional Components & Hooks)",
       "Axios / Fetch API",
@@ -70,19 +72,22 @@ export const projects = [
       "CSS Modules",
     ],
     about: `
-      The Mock Movie App is a React-based application that allows users to browse,
-      explore, and preview movies in a clean and intuitive interface. The app
-      focuses on delivering a smooth user experience while consuming external
-      movie APIs to fetch real-time data.
-      
-      Emphasis was placed on component reusability, API integration, and responsive
-      layouts to ensure usability across devices.
+      This API-driven Movie Platform is a deep dive into modern React development and external data integration. 
+      The project features a pixel-perfect recreation of a streaming site frontend, utilizing React hooks for state management and dynamic UI updates. 
+      By fetching and processing data from a live movie database, I implemented features like real-time search, dynamic content carousels, and detailed 
+      view modals with trailer video playback capabilities. The development process adhered to industry best practices, including consistent version control and clean, modular component structures, 
+      demonstrating my commitment to producing production-ready code with high design accuracy.
     `,
     challenges: [
       {
         title: "Handling Asynchronous Data Fetching",
         description:
           "Managing loading states, error handling, and conditional rendering while fetching movie data from external APIs.",
+      },
+      {
+        title: "Applying the correct styling to match design mock-ups",
+        description:
+          "Translating design specifications into responsive and visually accurate UI components using CSS modules.",
       },
       {
         title: "Scalable Component Structure",
@@ -97,6 +102,11 @@ export const projects = [
           "Building interfaces around API responses reinforced the importance of defensive programming and fallback states.",
       },
       {
+        title: "Performance-first Architecture Development",
+        description:
+          "Structuring components for reusability and clarity improved both development speed and code maintainability.",
+      },
+      {
         title: "State Management with Hooks",
         description:
           "Using React hooks effectively reduced complexity and improved readability across the application.",
@@ -108,12 +118,12 @@ export const projects = [
     slug: "recipe-finder-app",
     id: "03",
     title: "Recipe Finder App",
-    subtitle: "Search, save, and explore recipes with a clean UI",
+    subtitle: "Find, archive, and discover recipes through an elegant interface.",
     image: recipe,
-    projectType: "Frontend Web App",
+    projectType: "Frontend Application with client-side data persistence",
     role: "Frontend Developer",
     liveDemo: "https://recipe-finder-ljyu.vercel.app/",
-    source: "",
+    source: "https://github.com/Pheletso8/RecipeFinder",
     techStack: [
       "Vite",
       "React",
@@ -122,19 +132,22 @@ export const projects = [
       "localStorage",
     ],
     about: `
-      The Recipe Finder App enables users to search for recipes, view detailed
-      instructions, and save favorites for later use. Built with performance in
-      mind using Vite, the app delivers fast load times and a smooth navigation
-      experience.
-
-      Local storage is used to persist user preferences, creating a more personal
-      and engaging experience without the need for authentication.
+      An elegant, client-side Recipe Finder built with React and Tailwindcss that enables users to search, 
+      filter, and save culinary inspiration. The app features a high-performance filtering engine powered by useMemo 
+      and a persistent Dark/Light mode system. By leveraging React Router for seamless navigation and Tailwind CSS for a polished, 
+      responsive UI, I created a distraction-free experience that emphasizes accessibility and smooth state transitions. 
+      This project showcases my proficiency in modern React hooks and localized data persistence.
     `,
     challenges: [
       {
         title: "Persisting User Data",
         description:
           "Implementing localStorage in a way that felt seamless while keeping the UI in sync with stored data.",
+      },
+      {
+        title: "Implementing aGlobal Dark/Light Mode",
+        description:
+          "Creating a theme toggle that persisted user preference across sessions and applied consistently throughout the app.",
       },
       {
         title: "Search & Filtering Logic",
@@ -149,9 +162,19 @@ export const projects = [
           "Local storage can significantly enhance UX when used thoughtfully for lightweight data persistence.",
       },
       {
-        title: "Performance-first Tooling",
+        title: "Search & Filtering Optimization",
         description:
-          "Using Vite improved development speed and reinforced the value of modern build tools.",
+          "Efficient data handling and memoization are key to maintaining performance in dynamic search interfaces.",
+      },
+      {
+        title: "Optimized Rendering with useMemo",
+        description:
+          "Memoization techniques are crucial for maintaining performance in data-intensive React applications.",
+      },
+      {
+        title: "Theme Management",
+        description:
+          "A well-implemented theme system enhances user experience and accessibility across sessions.",
       },
     ],
   },
@@ -162,10 +185,10 @@ export const projects = [
     title: "Design for Food Shop",
     subtitle: "Modern UI design concept for a food retail brand",
     image: via,
-    projectType: "UI / Frontend Design",
+    projectType: "UI / Frontend Design that helps a client visualize the end product",
     role: "UI Designer & Frontend Developer",
     liveDemo: "https://vi-asamaria-web.vercel.app/",
-    source: "",
+    source: "https://github.com/Pheletso8/VIAsamaria-web",
     techStack: [
       "React",
       "TailwindCSS",
@@ -173,13 +196,13 @@ export const projects = [
       "Responsive Design",
     ],
     about: `
-      This project is a modern design concept for a food shop website, focused on
-      strong visual hierarchy, clean typography, and an inviting user experience.
-      The goal was to create a brand-forward layout that communicates quality and
-      warmth through design.
-
-      Attention was given to spacing, color balance, and responsiveness to ensure
-      the design translates well across devices.
+      This project is a modern design concept for a food shop website, built with a focus on strong visual hierarchy, 
+      clean typography, and an inviting user experience. The primary goal was to create a brand-forward layout that communicates 
+      premium quality and culinary warmth through intentional design choices.
+      To achieve this, I applied Color Theory to influence user perception and appetite. I curated a warm-toned color palette, 
+      utilizing rich earth tones and vibrant accent colors that evoke a sense of freshness and organic quality. By balancing 
+      high-chroma 'hero' colors with soft, neutral backgrounds, I created a visual rhythm that guides the user’s eye toward key calls-to-action 
+      while subtly highlighting important information such as promotions and featured menu items.
     `,
     challenges: [
       {
@@ -188,21 +211,21 @@ export const projects = [
           "Ensuring the design remained visually appealing without compromising accessibility or readability.",
       },
       {
-        title: "Consistent Design Language",
+        title: "Reducing Dependency on LLMs and Being Creative",
         description:
-          "Maintaining consistency across pages while allowing each section to feel distinct and purposeful.",
+          "Crafting unique design elements and layouts without over-reliance on AI-generated content to maintain originality.",
       },
     ],
     lessons: [
       {
-        title: "Design-led Development",
+        title: "Not over-thinking Design Choices, but making them intentional",
         description:
-          "Starting with strong visual foundations made implementation faster and more cohesive.",
+          "Every design element should serve a purpose, contributing to the overall user experience and brand message.",
       },
       {
-        title: "Importance of White Space",
+        title: "Learning UI/UX principles through practical application",
         description:
-          "Strategic use of spacing dramatically improved clarity and overall user perception.",
+          "Applying theoretical knowledge in real-world projects solidifies understanding and hones design instincts.",
       },
     ],
   },

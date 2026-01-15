@@ -1,7 +1,9 @@
 
 export default function InfoPill({ label }) {
   return (
-    <span className="px-4 py-1 rounded-full border border-primary1/30 text-sm text-primary1 bg-primary1/10">
+    <span className="bg-secondary1/20 text-text-main1 text-[10px]
+                      uppercase tracking-widest border border-secondary1
+                      px-3 py-1 rounded-full">
       {label}
     </span>
   );
