@@ -121,7 +121,7 @@ export const projects = [
     subtitle: "Find, archive, and discover recipes through an elegant interface.",
     image: recipe,
     projectType: "Frontend Application with client-side data persistence",
-    role: "Frontend Developer",
+    role: "Individual Project",
     liveDemo: "https://recipe-finder-ljyu.vercel.app/",
     source: "https://github.com/Pheletso8/RecipeFinder",
     techStack: [
@@ -186,7 +186,7 @@ export const projects = [
     subtitle: "Modern UI design concept for a food retail brand",
     image: via,
     projectType: "UI / Frontend Design that helps a client visualize the end product",
-    role: "UI Designer & Frontend Developer",
+    role: "Individual Project",
     liveDemo: "https://vi-asamaria-web.vercel.app/",
     source: "https://github.com/Pheletso8/VIAsamaria-web",
     techStack: [
