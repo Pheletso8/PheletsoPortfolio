@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { MoveUpRight } from "lucide-react";
 
 export default function ProjectCard({
@@ -9,9 +9,15 @@ export default function ProjectCard({
   slug,
   liveDemo,
 }) {
+  const navigate = useNavigate();
+
+  const handleCardClick = () => {
+    navigate(`/projects/${slug}`);
+  };
+
   return (
-    <Link
-      to={`/projects/${slug}`}
+    <div
+      onClick={handleCardClick}
       className="group shadow-lg cursor-pointer hover:shadow-2xl hover:shadow-primary1/10
                  relative w-full h-[450px] overflow-hidden rounded-2xl
                  border border-white/10 transition-all duration-700 ease-out"
@@ -36,7 +42,7 @@ export default function ProjectCard({
             {id}
           </div>
 
-          {/* Live demo (stop navigation) */}
+          {/* Live demo (stops navigation to project detail page) */}
           <a
             href={liveDemo}
             target="_blank"
@@ -73,6 +79,6 @@ export default function ProjectCard({
           </div>
         </div>
       </div>
-    </Link>
+    </div>
   );
 }
