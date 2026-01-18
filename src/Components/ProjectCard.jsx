@@ -19,7 +19,7 @@ export default function ProjectCard({
     <div
       onClick={handleCardClick}
       className="group shadow-lg cursor-pointer hover:shadow-2xl hover:shadow-primary1/10
-                 relative w-full h-[450px] overflow-hidden rounded-2xl
+                 relative w-full h-[440px] overflow-hidden rounded-2xl
                  border border-white/10 transition-all duration-700 ease-out"
     >
       {/* Background Image */}
