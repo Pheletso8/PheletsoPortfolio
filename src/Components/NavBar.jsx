@@ -18,7 +18,7 @@ export default function NavBar() {
       className={`fixed top-0 w-full z-50 px-6 md:px-12 lg:px-24 xl:px-40 flex items-center justify-between
         transition-all duration-500 ease-in-out
         ${isScrolled
-          ? 'bg-background1/80 backdrop-blur-lg py-4 border-b border-primary1/10 shadow-lg'
+          ? 'bg-background1/80 backdrop-blur-lg py-4'
           : 'bg-transparent py-6'
         }`}
     >
