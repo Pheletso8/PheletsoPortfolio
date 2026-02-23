@@ -1,6 +1,6 @@
-import mern from "../assets/mern.avif";
-import stream from "../assets/stream.avif";
-import recipe from "../assets/recipe.jpg";
+import mern from "../assets/mern.jfif";
+import stream from "../assets/stream.jfif";
+import recipe from "../assets/recipe.jfif";
 import via from "../assets/via.jpg";
 
 export const projects = [

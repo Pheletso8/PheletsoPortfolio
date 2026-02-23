@@ -1,11 +1,10 @@
 import { ArrowDown } from 'lucide-react';
 import { motion } from 'framer-motion';
+import LangflowChat from './LangflowChat'; // Import the fixed chat component
 
 const container = {
   hidden: {},
-  visible: {
-    transition: { staggerChildren: 0.12 },
-  },
+  visible: { transition: { staggerChildren: 0.12 } },
 };
 
 const fadeUp = {
@@ -62,12 +61,15 @@ export default function Hero() {
         </motion.a>
       </motion.div>
 
+      {/* Stats & Chat Container */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.6, duration: 0.8 }}
-        className="absolute bottom-12 right-6 md:right-12 lg:right-24 xl:right-40 flex flex-col gap-8 md:gap-12"
-      >
+        className="absolute bottom-12 right-6 md:right-12 lg:right-24 xl:right-40 flex flex-col items-end gap-8 md:gap-12"
+      > 
+        <LangflowChat /> {/* Fixed Chat Component */}
+
         <div className="text-right">
           <span className="text-accent1/80 text-4xl md:text-5xl font-serif">1+</span>
           <p className="text-[10px] md:text-xs uppercase tracking-widest text-text-main1/40 mt-1">
