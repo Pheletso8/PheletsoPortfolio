@@ -1,3 +1,4 @@
+'use client';
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
@@ -9,6 +10,27 @@ export default function NavBar() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // --- FIXED: JavaScript Version of Smooth Scroll ---
+  const scrollToSection = (e, id) => {
+    e.preventDefault();
+    const element = document.querySelector(id);
+    if (element) {
+      const offset = 80; // Offsets the height of the fixed navbar
+      const bodyRect = document.body.getBoundingClientRect().top;
+      const elementRect = element.getBoundingClientRect().top;
+      const elementPosition = elementRect - bodyRect;
+      const offsetPosition = elementPosition - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+
+      // Update URL hash without jumping
+      window.history.pushState(null, '', id);
+    }
+  };
 
   return (
     <motion.nav
@@ -22,7 +44,11 @@ export default function NavBar() {
           : 'bg-transparent py-6'
         }`}
     >
-      <a href="#home" className="group flex items-center gap-3">
+      <a 
+        href="#home" 
+        onClick={(e) => scrollToSection(e, '#home')}
+        className="group flex items-center gap-3"
+      >
         <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-primary1/10 border border-primary1/30 flex items-center justify-center group-hover:bg-primary1/20 transition-all duration-300">
           <span className="font-serif text-lg md:text-xl text-primary1">PM</span>
         </div>
@@ -32,11 +58,17 @@ export default function NavBar() {
       </a>
 
       <div className="flex items-center gap-2 md:gap-6 text-sm text-text-main1 font-medium">
-        <a href="#projects" className="p-2 text-primary1 hover:text-text-main1 transition-colors duration-300">
+        <a 
+          href="#projects" 
+          onClick={(e) => scrollToSection(e, '#projects')}
+          className="p-2 text-primary1 hover:text-text-main1 transition-colors duration-300"
+        >
           My Work
         </a>
+        
         <a
           href="#contact"
+          onClick={(e) => scrollToSection(e, '#contact')}
           className="px-5 py-2.5 text-primary1 border-primary1/40 border rounded-full
           hover:bg-primary1/80 hover:text-white hover:border-primary1
           transition-all duration-300 bg-primary1/5 backdrop-blur-sm"

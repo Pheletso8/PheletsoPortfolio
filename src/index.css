@@ -1,7 +1,12 @@
 @import "tailwindcss";
+html {
+  scroll-behavior: smooth !important;
+}
 
-/* Remove the animate and shadcn imports if they cause errors */
-/* @import "shadcn/tailwind.css"; */
+body {
+  @apply bg-background text-foreground;
+  overflow-x: hidden;
+}
 
 @custom-variant dark (&:is(.dark *));
 
