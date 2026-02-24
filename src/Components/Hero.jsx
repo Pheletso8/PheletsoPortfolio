@@ -38,25 +38,25 @@ export default function Hero() {
             initial={{ opacity: 0, x: 50, scale: 0.9 }}
             animate={{ opacity: 1, x: 0, scale: 1 }}
             exit={{ opacity: 0, scale: 0.9 }}
-            className="fixed top-6 right-6 z-100 max-w-70 md:max-w-xs"
+            className="fixed top-20 right-6 z-100 max-w-70 md:max-w-xs"
           >
-            <div className="bg-background1 border border-white/10 p-4 rounded-2xl shadow-2xl backdrop-blur-md relative overflow-hidden group">
+            <div className="bg-primary1/20 border border-white/10 p-4 rounded-2xl shadow-2xl backdrop-blur-md relative overflow-hidden group">
               {/* Subtle gradient glow to match your text */}
               <div className="absolute top-0 left-0 w-1 h-full bg-linear-to-b from-primary1 to-secondary1" />
               
               <div className="flex gap-4 items-start">
-                <div className="p-2 bg-accent1/10 rounded-lg text-accent1">
+                <div className="p-2 bg-accent1/40 rounded-lg border-2 border-accent1 text-accent1">
                   <MessageSquare size={18} />
                 </div>
                 <div className="flex-1">
                   <h4 className="text-text-main1 text-sm font-medium">AI Assistant Online</h4>
-                  <p className="text-text-main1/60 text-xs mt-1 leading-relaxed">
+                  <p className="text-text-main1/80 text-xs mt-1 leading-relaxed">
                     Have questions about my projects? Ask my chatbot below!
                   </p>
                 </div>
                 <button 
                   onClick={() => setShowAlert(false)}
-                  className="text-text-main1/40 hover:text-text-main1 transition-colors"
+                  className="text-text-main1/40 cursor-pointer hover:text-text-main1 transition-colors"
                 >
                   <X size={16} />
                 </button>

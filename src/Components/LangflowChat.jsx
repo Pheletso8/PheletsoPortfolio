@@ -59,9 +59,9 @@ export default function LangflowChat() {
             <div className="p-4 border-b border-white/10 flex justify-between items-center bg-white/5">
               <div className="flex items-center gap-2">
                 <div className={`w-2 h-2 rounded-full ${isLoading ? "bg-accent1 animate-pulse" : "bg-green-500"}`} />
-                <span className="font-medium text-white text-[10px] uppercase tracking-widest opacity-80">AI Agent Active</span>
+                <span className="font-medium text-white text-[10px] uppercase tracking-widest opacity-80">Pheletso's AI Assistant</span>
               </div>
-              <button onClick={() => setIsOpen(false)} className="text-white/40 hover:text-white"><X size={18} /></button>
+              <button onClick={() => setIsOpen(false)} className="text-white/40 cursor-pointer hover:text-white"><X size={18} /></button>
             </div>
 
             {/* Messages */}
