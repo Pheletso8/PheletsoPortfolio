@@ -1,16 +1,16 @@
 @import "tailwindcss";
 
-@theme {
-  --color-primary1: #3ec170;   /* Main brand color */
-  --color-secondary1: #252370; /* Secondary color */
-  --color-accent1: #b078d3;    /* Highlight/Call-to-action */
-  --color-background1: #040b07; /* Background color */
-  --color-text-main1: #ecf8f2;
-}
+/* Remove the animate and shadcn imports if they cause errors */
+/* @import "shadcn/tailwind.css"; */
 
-.container-x {
-  @apply px-6 md:px-12 lg:px-24 xl:px-42 2xl:px-64;
-}
-html {
-  scroll-behavior: smooth;
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --color-primary1: #3ec170;
+  --color-secondary1: #252370;
+  --color-accent1: #b078d3;
+  --color-background1: #040b07;
+  --color-text-main1: #ecf8f2;
+  
+  /* Rest of your @theme variables... */
 }
