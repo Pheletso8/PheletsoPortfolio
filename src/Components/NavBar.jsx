@@ -6,17 +6,16 @@ export default function NavBar() {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 10);
+    const handleScroll = () => setIsScrolled(window.scrollY > 20);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // --- FIXED: JavaScript Version of Smooth Scroll ---
   const scrollToSection = (e, id) => {
     e.preventDefault();
     const element = document.querySelector(id);
     if (element) {
-      const offset = 80; // Offsets the height of the fixed navbar
+      const offset = 80; 
       const bodyRect = document.body.getBoundingClientRect().top;
       const elementRect = element.getBoundingClientRect().top;
       const elementPosition = elementRect - bodyRect;
@@ -27,7 +26,6 @@ export default function NavBar() {
         behavior: 'smooth'
       });
 
-      // Update URL hash without jumping
       window.history.pushState(null, '', id);
     }
   };
@@ -36,12 +34,12 @@ export default function NavBar() {
     <motion.nav
       initial={{ y: -24, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.6, ease: 'easeOut' }}
+      transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }} // Smooth professional easing
       className={`fixed top-0 w-full z-50 px-6 md:px-12 lg:px-24 xl:px-40 flex items-center justify-between
-        transition-all duration-500 ease-in-out
+        transition-all duration-700 ease-in-out border-b
         ${isScrolled
-          ? 'bg-background1/80 backdrop-blur-lg py-4 border-b border-primary1/20'
-          : 'bg-transparent py-6'
+          ? 'bg-background1/80 backdrop-blur-lg py-4 border-primary1/20'
+          : 'bg-transparent py-6 border-transparent' 
         }`}
     >
       <a 

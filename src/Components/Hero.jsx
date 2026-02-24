@@ -1,7 +1,6 @@
 import { ArrowDown, MessageSquare, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
-// LangflowChat moved to top-level layout so it remains fixed across pages
 
 const container = {
   hidden: {},
@@ -21,17 +20,35 @@ export default function Hero() {
   const [showAlert, setShowAlert] = useState(false);
 
   useEffect(() => {
-    // Show alert after 3 seconds to let the hero animation finish first
     const timer = setTimeout(() => setShowAlert(true), 3000);
     return () => clearTimeout(timer);
   }, []);
+
+  // --- ADDED: SMOOTH SCROLL HELPER ---
+  const scrollToSection = (e, id) => {
+    e.preventDefault();
+    const element = document.querySelector(id);
+    if (element) {
+      const offset = 80; // Matches navbar height
+      const bodyRect = document.body.getBoundingClientRect().top;
+      const elementRect = element.getBoundingClientRect().top;
+      const elementPosition = elementRect - bodyRect;
+      const offsetPosition = elementPosition - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+
+      window.history.pushState(null, '', id);
+    }
+  };
 
   return (
     <section
       id="home"
       className="min-h-screen bg-background1 flex flex-col justify-center relative overflow-hidden"
     >
-      {/* --- Notification Alert --- */}
       <AnimatePresence>
         {showAlert && (
           <motion.div
@@ -41,7 +58,6 @@ export default function Hero() {
             className="fixed top-20 right-6 z-100 max-w-70 md:max-w-xs"
           >
             <div className="bg-primary1/20 border border-white/10 p-4 rounded-2xl shadow-2xl backdrop-blur-md relative overflow-hidden group">
-              {/* Subtle gradient glow to match your text */}
               <div className="absolute top-0 left-0 w-1 h-full bg-linear-to-b from-primary1 to-secondary1" />
               
               <div className="flex gap-4 items-start">
@@ -90,9 +106,11 @@ export default function Hero() {
           I build scalable software solutions that blend aesthetics with functionality
         </motion.h2>
 
+        {/* --- MODIFIED: Added onClick and smoothed the transition --- */}
         <motion.a
           variants={fadeUp}
           href="#projects"
+          onClick={(e) => scrollToSection(e, '#projects')}
           className="flex gap-4 items-center pt-10 group cursor-pointer w-fit"
         >
           <span className="p-3 text-accent1 border-white/10 border-[1.5px] rounded-full
@@ -105,7 +123,6 @@ export default function Hero() {
         </motion.a>
       </motion.div>
 
-      {/* Stats & Chat Container */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
