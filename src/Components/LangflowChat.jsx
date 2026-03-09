@@ -39,7 +39,7 @@ export default function LangflowChat() {
       const botText = data.reply || data.message || data.content || data.text;
       setMessages((prev) => [...prev, { role: "bot", text: botText || "No response received" }]);
     } catch (error) {
-      setMessages((prev) => [...prev, { role: "error", text: "**Error:** Connection issue. Check your API." }]);
+      setMessages((prev) => [...prev, { role: "error", text: "**Error:** Connection issue." }]);
     } finally {
       setIsLoading(false);
     }
@@ -59,14 +59,14 @@ export default function LangflowChat() {
             <div className="p-4 border-b border-white/10 flex justify-between items-center bg-white/5">
               <div className="flex items-center gap-2">
                 <div className={`w-2 h-2 rounded-full ${isLoading ? "bg-cyan-400 animate-pulse" : "bg-green-500"}`} />
-                <span className="font-bold text-white text-[10px] uppercase tracking-widest opacity-80">AI Assistant</span>
+                <span className="font-bold text-white text-[10px] uppercase tracking-widest opacity-80">Pheletso's AI Assistant</span>
               </div>
               <button onClick={() => setIsOpen(false)} className="text-white/40 hover:text-white transition-colors"><X size={18} /></button>
             </div>
 
             {/* Messages Area */}
             <div ref={scrollRef} className="flex-1 overflow-y-auto p-4 space-y-4 custom-scrollbar">
-              {messages.length === 0 && <div className="text-center pt-10 text-white/20 text-xs uppercase tracking-[0.2em]">Systems Ready</div>}
+              {messages.length === 0 && <div className="text-center pt-10 text-white/20 text-xs uppercase tracking-[0.2em]">I am Ready</div>}
               {messages.map((msg, i) => (
                 <div key={i} className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}>
                   <div className={`p-3 rounded-2xl max-w-[90%] text-sm prose prose-invert overflow-x-auto ${
