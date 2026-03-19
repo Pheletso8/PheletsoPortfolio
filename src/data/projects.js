@@ -2,10 +2,11 @@ import mern from "../assets/mern.jfif";
 import stream from "../assets/stream.jfif";
 import recipe from "../assets/recipe.jfif";
 import via from "../assets/via.jpg";
+import prompt from "../assets/logoPromptPal.png"
 
 export const projects = [
   {
-    slug: "task-manager",
+    slug: "Task Manager",
     id: "01",
     title: "Task Manager",
     subtitle: "A platform to manage and visualize tasks efficiently",
@@ -56,8 +57,61 @@ export const projects = [
     ],
   },
   {
-    slug: "mock-movie-app",
+    slug: "Prompt Pal",
     id: "02",
+    title: "PromptPal",
+    subtitle: "A Platform to help Grade 7s use AI better",
+    image: prompt,
+    projectType: "An Individual Innovative project that aims to help learners better leverage the use of genAI",
+    role: "Individual Project",
+    liveDemo: "https://prompt-pal-six.vercel.app/",
+    source: "https://github.com/Pheletso8/PromptPal",
+    techStack: [
+      "React",
+      "TypeScript",
+      "Mongoose",
+      "Python-for Chatbot",
+      "TailwindCSS",
+      "Node.js",
+      "express",
+      "Zustand",
+      "REST API"
+    ],
+    about: `
+      PromptPal is an innovative educational platform meticulously engineered for Grade 7 students to cultivate essential prompt literacy and critical thinking skills in an AI-driven world. 
+      By offering a curated library of structured prompt templates, the platform provides young learners with the scaffolding necessary to move beyond simple queries and engage in sophisticated, 
+      meaningful interactions with artificial intelligence. 
+      At the heart of the experience is a secure, built-in chat interface designed with strict pedagogical guardrails; rather than providing direct answers, 
+      the interface acts as a strategic guide, utilizing Socratic methods to encourage independent problem-solving and deep conceptual understanding.
+    `,
+    challenges: [
+      {
+        title: "Developing and deploying the multi-agent AI system.",
+        description:
+          "I had to learn how to deploy a python backend using docker and a free api service called render",
+      },
+      {
+        title: "Integrating the frontend with the backend",
+        description:
+          "I had to learn how to integrate the frontend with the backend, in the context of python and react whilst architecturing everything to scale",
+      },
+    ],
+    lessons: [
+      {
+        title: "changing a sequential agentic architecture to a streaming one",
+        description:
+          "I had to learn how to change a sequential agentic architecture to a streaming one, which was a challenge",
+      },
+      {
+        title: "Designing everything with the grade 7 at the center",
+        description:
+          "I had to learn how to design everything with the grade 7 at the center, which was a challenge",
+      },
+    ],
+  },
+  {
+    slug: "mock-movie-app",
+    id: "03",
     title: "Mock Movie App",
     subtitle: "A responsive movie discovery and streaming mock-up platform",
     image: stream,
@@ -116,7 +170,7 @@ export const projects = [
 
   {
     slug: "recipe-finder-app",
-    id: "03",
+    id: "04",
     title: "Recipe Finder App",
     subtitle: "Find, archive, and discover recipes through an elegant interface.",
     image: recipe,
@@ -181,7 +235,7 @@ export const projects = [
 
   {
     slug: "food-shop-design",
-    id: "04",
+    id: "05",
     title: "Design for Food Shop",
     subtitle: "Modern UI design concept for a food retail brand",
     image: via,
