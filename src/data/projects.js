@@ -6,12 +6,12 @@ import prompt from "../assets/logoPromptPal.png"
 
 export const projects = [
   {
-    slug: "Task Manager",
+    slug: "PlanUp",
     id: "01",
-    title: "Task Manager",
+    title: "PlanUp",
     subtitle: "A platform to manage and visualize tasks efficiently",
     image: mern,
-    projectType: "MERN Fullstack exploration to learn backend Fundamentals",
+    projectType: "MERN Fullstack exploration to learn backend Fundamentals through C.R.U.D operations",
     role: "Individual Project",
     liveDemo: "https://mern-crud-app-jis3.vercel.app/",
     source: "https://github.com/Pheletso8/MERN-CRUD-app",
