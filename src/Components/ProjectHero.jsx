@@ -20,17 +20,16 @@ export default function ProjectHero({ project }) {
 
       {/* Content Container */}
       <div className="relative mt-auto p-8 sm:p-16 lg:px-32 xl:px-40 z-10 max-w-6xl">
-        <span className="inline-block text-5xl font-serif text-accent1/30 mb-2 
+        <span className="inline-block text-5xl font-serif text-primary1 font-light opacity-80 mb-2 
                          transition-colors duration-700 italic">
           {project.id}
         </span>
         
-        <h1 className="text-5xl md:text-7xl bg-linear-to-r from-primary1 to-secondary1 bg-clip-text text-transparent font-serif mb-4 leading-tight">
+        <h1 className="text-5xl md:text-7xl text-primary1 font-serif mb-4 leading-tight">
           {project.title}
         </h1>
         
-        <p className="bg-linear-to-r from-text-main1 to-secondary1 bg-clip-text text-transparent
-          font-medium text-lg md:text-xl max-w-2xl">
+        <p className="text-text-main1/80 font-medium text-lg md:text-xl max-w-2xl">
           {project.subtitle}
         </p>
       </div>

@@ -37,8 +37,8 @@ export default function ProjectCard({
       {/* Content */}
       <div className="relative z-10 h-full p-8 flex flex-col justify-between">
         <div className="flex justify-between items-start">
-          <div className="text-5xl font-serif text-accent1/30
-                          group-hover:text-accent1 transition-colors duration-700 italic">
+          <div className="text-5xl font-serif text-primary1 font-light opacity-80
+                          group-hover:opacity-100 transition-opacity duration-500 italic">
             {id}
           </div>
 

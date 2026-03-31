@@ -137,8 +137,8 @@ export default function ProjectBlog() {
           </motion.div>
         </div>
         <div className="flex flex-col gap-6 justify-center items-center  text-center pt-18 border-t border-primary1 px-0">
-          <p className="bg-linear-to-r text-lg from-text-main1 to-secondary1 bg-clip-text text-transparent font-medium">Look at more Projects</p>
-          <BackLink />
+          <p className="text-lg text-text-main1/80 font-medium">Look at more Projects</p>
+          <BackLink variant="outline" />
         </div>
       </div>
     </motion.div>

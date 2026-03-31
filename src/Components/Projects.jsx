@@ -13,8 +13,7 @@ export default function Projects() {
       <div className="flex flex-col md:flex-row justify-between
                       items-start md:items-end pb-12 gap-y-4">
         <h1 className="text-5xl pb-8 md:text-6xl font-medium
-                       bg-gradient-to-r from-primary1 to-primary1/40
-                       text-transparent bg-clip-text font-serif">
+                       text-primary1 font-serif">
           Featured Projects
         </h1>
 

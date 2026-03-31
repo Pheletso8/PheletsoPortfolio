@@ -93,7 +93,7 @@ export default function Hero() {
         </motion.h2>
 
         <motion.h1 variants={fadeUp} className="text-5xl md:text-7xl lg:text-8xl font-large mb-6 leading-tight">
-          <span className="bg-linear-to-r from-primary1 to-secondary1 bg-clip-text text-transparent font-serif">
+          <span className="bg-linear-to-r from-primary1 via-[#60A5FA] to-accent1 bg-clip-text text-transparent font-serif">
             Complex data to <br className="hidden md:block" /> Actionable insights
           </span>
         </motion.h1>
@@ -113,11 +113,11 @@ export default function Hero() {
           onClick={(e) => scrollToSection(e, '#projects')}
           className="flex gap-4 items-center pt-10 group cursor-pointer w-fit"
         >
-          <span className="p-3 text-accent1 border-white/10 border-[1.5px] rounded-full
-            group-hover:bg-accent1/80 group-hover:text-text-main1 transition-all duration-300">
+          <span className="p-3 text-primary1 border-primary1/40 border-[1.5px] rounded-full
+            group-hover:bg-primary1/10 group-hover:border-primary1 transition-all duration-300">
             <ArrowDown size={20} />
           </span>
-          <span className="text-text-main1 font-medium group-hover:text-accent1/80 transition-colors duration-300">
+          <span className="text-text-main1 font-medium group-hover:text-primary1 transition-colors duration-300">
             See Featured work
           </span>
         </motion.a>
@@ -130,13 +130,13 @@ export default function Hero() {
         className="absolute bottom-12 right-6 md:right-12 lg:right-24 xl:right-40 flex flex-col items-end gap-8 md:gap-12"
       > 
         <div className="text-right">
-          <span className="text-accent1/80 text-4xl md:text-5xl font-serif">1+</span>
+          <span className="text-primary1 text-4xl md:text-5xl font-serif">1+</span>
           <p className="text-[10px] md:text-xs uppercase tracking-widest text-text-main1/40 mt-1">
             Years Experience
           </p>
         </div>
         <div className="text-right">
-          <span className="text-accent1/80 text-4xl md:text-5xl font-serif">5+</span>
+          <span className="text-primary1 text-4xl md:text-5xl font-serif">5+</span>
           <p className="text-[10px] md:text-xs uppercase tracking-widest text-text-main1/40 mt-1">
             Projects Delivered
           </p>
