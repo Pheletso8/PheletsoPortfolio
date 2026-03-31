@@ -3,6 +3,7 @@ import stream from "../assets/stream.jfif";
 import recipe from "../assets/recipe.jfif";
 import via from "../assets/via.jpg";
 import prompt from "../assets/logoPromptPal.png"
+import deal from "../assets/dealfinder.png"
 
 export const projects = [
   {
@@ -106,6 +107,55 @@ export const projects = [
         title: "Designing everything with the grade 7 at the center",
         description:
           "I had to learn how to design everything with the grade 7 at the center, which was a challenge",
+      },
+    ],
+  },
+  {
+    slug: "Tech Deal finder",
+    id: "03",
+    title: "Tech Deal finder",
+    subtitle: "A Platform that leverages web scrapping and an agentic system to return the best deals for a tech search",
+    image: deal,
+    projectType: "An Team project that leverages web scrapping to return the best deals using an AI agentic system",
+    role: "Team Project",
+    liveDemo: "https://deals-marketplace.vercel.app/",
+    source: "https://github.com/Pheletso8/deals-marketplace",
+    techStack: [
+      "React",
+      "Javascript",
+      "Python",
+      "TailwindCSS",
+      "Web-scrapping",
+      "Agentic AI"
+    ],
+    about: `
+      Deals Finder is a platform that leverages a Multi-agentic system to scrape takealot website to return the truly best deals for a tech search. 
+      It uses a combination of web scraping and AI to find the best deals for a tech search. 
+      The system is designed to be used by anyone who wants to find the best deals for a tech search. This is through the use of a simple and intuitive user interface 
+      That has a familiar interface to that of takealot.
+    `,
+    challenges: [
+      {
+        title: "Developing and deploying the multi-agent AI system.",
+        description:
+          "I had to learn how to deploy a python backend using docker and a free tier service to AWS E2C",
+      },
+      {
+        title: "Building a robust web scrapper",
+        description:
+          "I had to build a robust web-scrapper that takes into account a lot of factors to compare tech products in a way that is fair and accurate.",
+      },
+    ],
+    lessons: [
+      {
+        title: "Focusing on the user experience",
+        description:
+          "Building a familiar interface that is easy to use and understand, is key to the success of a product.",
+      },
+      {
+        title: "The importance of testing",
+        description:
+          "Testing is a crucial part of the development process, it helps to ensure that the product is working as expected and that it is free of bugs.",
       },
     ],
   },
