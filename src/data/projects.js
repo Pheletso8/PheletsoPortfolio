@@ -3,7 +3,7 @@ import stream from "../assets/stream.jfif";
 import recipe from "../assets/recipe.jfif";
 import via from "../assets/via.jpg";
 import prompt from "../assets/logoPromptPal.png"
-import deal from "../assets/dealfinder.png"
+import deal from "../assets/dealfinder.PNG"
 
 export const projects = [
   {
@@ -161,7 +161,7 @@ export const projects = [
   },
   {
     slug: "mock-movie-app",
-    id: "03",
+    id: "04",
     title: "Mock Movie App",
     subtitle: "A responsive movie discovery and streaming mock-up platform",
     image: stream,
@@ -220,7 +220,7 @@ export const projects = [
 
   {
     slug: "recipe-finder-app",
-    id: "04",
+    id: "05",
     title: "Recipe Finder App",
     subtitle: "Find, archive, and discover recipes through an elegant interface.",
     image: recipe,
@@ -285,7 +285,7 @@ export const projects = [
 
   {
     slug: "food-shop-design",
-    id: "05",
+    id: "06",
     title: "Design for Food Shop",
     subtitle: "Modern UI design concept for a food retail brand",
     image: via,
