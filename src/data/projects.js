@@ -1,4 +1,4 @@
-import mern from "../assets/mern.jfif";
+import PlanUp from "../assets/PlanUp.PNG";
 import stream from "../assets/stream.jfif";
 import recipe from "../assets/recipe.jfif";
 import via from "../assets/via.jpg";
@@ -11,7 +11,7 @@ export const projects = [
     id: "01",
     title: "PlanUp",
     subtitle: "A platform to manage and visualize tasks efficiently",
-    image: mern,
+    image: PlanUp,
     projectType: "MERN Fullstack exploration to learn backend Fundamentals through C.R.U.D operations",
     role: "Individual Project",
     liveDemo: "https://mern-crud-app-jis3.vercel.app/",
