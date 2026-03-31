@@ -24,4 +24,15 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"), // 2. Define the @ alias
     },
   },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (id.includes('node_modules')) {
+            return 'vendor';
+          }
+        },
+      },
+    },
+  }
 })
